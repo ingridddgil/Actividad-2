@@ -1,6 +1,6 @@
 class Main{
     public static void main(String[] args){
-        Rectangulo r1 = new Rectangulo(4,3);
+        Rectangle r1 = new Rectangle(4,3);
         r1.getArea();
         System.out.println("Area of the rectangle: " + r1.getArea());
         System.out.println("Perimeter of the rectangle: " + r1.getPerimeter());
@@ -10,12 +10,12 @@ class Main{
     }
 }
 
-abstract class Figura {
+abstract class Figure {
     private int numberOfSides;
 
-    public Figura(){}
+    public Figure(){}
 
-    public Figura(int numberSides){
+    public Figure(int numberSides){
         this.numberOfSides = numberSides;
     }
 
@@ -32,11 +32,11 @@ interface Resize {
     public void resize(float factor);
 }
 
-class Triangulo extends Figura{
+class Triangle extends Figure{
     private float width;
     private float height;
 
-    public Triangulo (float width, float height){
+    public Triangle (float width, float height){
         super(3);
         this.width = width;
         this.height = height;
@@ -53,11 +53,11 @@ class Triangulo extends Figura{
     }
 }
 
-class Rectangulo extends Figura{
+class Rectangle extends Figure{
     private float width;
     private float height;
 
-    public Rectangulo (float width, float height){
+    public Rectangle (float width, float height){
         super(4);
         this.width = width;
         this.height = height;
